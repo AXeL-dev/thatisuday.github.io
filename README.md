@@ -1,1 +1,0 @@
-# thatisuday.github.io
