@@ -88,15 +88,6 @@ html, body{
         }
     }
 
-    &:not(.bottom):hover{
-        background: linear-gradient(35deg, #4b1b75 0%, #a07d8d 100%);
-        box-shadow: 0 0 0.46rem rgba(0,0,0,0.1);
-
-        >a{
-            opacity: 0.5;
-        }
-    }
-
     >a{
         font-size: 0;
         text-decoration: none;
@@ -107,7 +98,7 @@ html, body{
         }
 
         &:hover{
-            opacity: 1;
+            transform: scale(1.1);
         }
     }
 }
@@ -144,6 +135,7 @@ html, body{
                     z-index: 1;
                     position: relative;
                     animation: opaque 2s infinite alternate;
+                    vertical-align: bottom;
 
                     &.reveal{
                         position: absolute;
@@ -198,9 +190,17 @@ html, body{
         &.projects{
             background-image: linear-gradient(-35deg, #434343 0%, black 100%);
 
+            a.icon-link{
+                font-size: 0;
+                text-decoration: none;
+
+                img{
+                    width: 200px;
+                }
+            }
+            
             h2{
-                margin-bottom: 1rem !important;
-                text-shadow: none;
+                margin-bottom: 0.5rem !important;
             }
 
             .repos{
@@ -229,7 +229,7 @@ html, body{
                         text-transform: uppercase;
                         letter-spacing: 0.075rem;
                         font-weight: 700;
-                        color: #607d8b;
+                        color: #ad5c51;
                         background: rgba(255,255,255,1);
                     }
 
@@ -249,11 +249,18 @@ html, body{
                         align-items: center;
                         padding: 0.5rem 1rem 0.5rem;
                         color: #fff;
-                        background: #e91e63;
+                        background: #ad5c51;
+                        box-shadow: inset 0 -2px 2px -2px rgba(0,0,0,0.3);
 
                         >div{
                             margin-right: 0.5rem;
                             font-size: 0.5rem;
+                        }
+                    }
+
+                    &:hover{
+                        >.counts{
+                            background: #607d8b;
                         }
                     }
                 }
@@ -264,15 +271,28 @@ html, body{
         &.recent-blog{
             background-image: linear-gradient(35deg, black 0%,  #434343 100%);
 
-            img{
-                width: 200px;
-                margin-bottom: 1rem;
+            a.icon-link{
+                font-size: 0;
+                text-decoration: none;
+                
+                img{
+                    width: 200px;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            h2{
+                margin-bottom: 0.5rem !important;
             }
 
             a{
                 display: block;
                 text-decoration: none;
                 color: #fff;
+
+                >h5:hover{
+                    color: #00FD8D;
+                }
             }
         }
     }

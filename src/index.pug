@@ -1,0 +1,109 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Uday Hiwarale
+        meta(name="description" content="Fullstack web developer and tech blogger. Passionate about IoT 🤖, Interior design 🛋️, Space science 🌌, Astronomy 👽 and Entrepreneurship 💰.")
+    
+        //- assets
+        link(rel="icon", type="image/x-icon", href="./dept/favicon.ico")
+        link(href="https://fonts.googleapis.com/css?family=Catamaran:100,300,400,500,700,900|Open+Sans+Condensed:300,400,700", rel="stylesheet")
+        link(rel="stylesheet", href="./styles.css")
+        link(rel="stylesheet" href="./dept/jquery.fullpage.min.css")
+        script(src="./dept/jquery.min.js")
+        script(src="./dept/jquery.fullpage.min.js")
+        script(src="./dept/typeit.min.js")
+
+        //- script
+        script.
+            // fullPage.js pugin
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    navigation: true,
+                    easingcss3: 'ease-in-out',
+                    afterRender: function() {
+                        // typeit plugin
+                        var instance = new TypeIt('#typeit', {
+                            strings: [
+                                'Full Stack Web Developer',
+                                'AngularJS and Angular 4+',
+                                'Node.js (es5/es6/es7)',
+                                'PHP, Golang and Python',
+                                'MySQL, MongoDB and IndexedDB',
+                                'Pug, SASS and Typescript',
+                                'Gulp and Webpack',
+                                'Progressive web apps',
+                                'Express (REST), Mongoose and Sequelize',
+                                'Unit testing and continious integration',
+                                'Docker and microservices',
+                                'Server Management and GCS, AWS',
+                                'Adobe PS, PR, AI, AE and AU'
+                            ],
+                            breakLines: false,
+                            loopDelay: 2000,
+                            loop: true
+                        });
+                    }
+                });
+            });
+    body
+
+        //- icons menu
+        .icons-menu
+            a(href="https://github.com/thatisuday", target="_blank")
+                img(src="./dept/github.svg", alt="github")
+            a(href="https://medium.com/@thatisuday", target="_blank")
+                img(src="./dept/medium.svg", alt="medium")
+            a(href="https://twitter.com/thatisuday", target="_blank")
+                img(src="./dept/twitter.svg", alt="twitter")
+            a(href="https://ezgo.run", target="_blank")
+                img(src="./dept/link.svg", alt="golang")
+
+        .icons-menu.bottom
+            a(href="mailto:thatisuday@gmail.com")
+                img(src="./dept/gmail.svg", alt="gmail")
+
+        #fullpage
+            //- about me
+            .section.about
+                .profile-pic
+                    img(src="./dept/profile-pic.png", alt="")
+                    img(class="reveal", src="./dept/profile-pic-reveal.png", alt="")
+
+                h1 Uday Hiwarale
+                h6#typeit
+                .desc I have always been fascinated by technology. After graduating from IIT Indore (ME) in 2014, I took an unusual step of stepping into unusual world of programming. Since then, I have acquired good taste in areas like front-end development, back-end development, database management, UI/UX design, open source and tech blogging. I'm available for work - if you would like to build something together, <a href="mailto:thatisuday@gmail.com">get in touch</a>.
+
+            //- skills
+            .section.skills
+                .item 
+                    img(src="./dept/skills.svg", alt="")
+
+            //- projects
+            .section.projects
+                a.icon-link(href="https://github.com/thatisuday?tab=repositories", target="_blank")
+                    img(src="./dept/github-color.svg", alt="")
+                h2 Open Source Work
+
+                .repos
+                    for repo in repos
+                        a.repo(href=`http://github.com/thatisuday/${repo.name}`, target="_blank")
+                            .name= repo.name
+                            .desc= repo.desc
+
+                            .counts
+                                .stars #{repo.stars} starts
+                                .forks #{repo.forks} forks
+                                .npm #{repo.downloads} downloads
+
+            //- recent blogs
+            .section.recent-blog
+                a.icon-link(href="https://medium.com/@thatisuday/latest", target="_blank")
+                    img(src="./dept/medium-color.svg", alt="")
+                h2 Read my recent post
+
+                for post in posts
+                    a(target="_blank", href=post.url)
+                        h5.title= post.name
