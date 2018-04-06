@@ -167,20 +167,37 @@ html, body{
         // skills
         &.skills{
             background-image: linear-gradient(35deg, black 0%,  #434343 100%);
+            
+            h2{
+                margin-bottom: 1rem !important;
+            }
 
-            .flex-content-box{
+            .uls{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
                 flex-wrap: wrap;
-                width: 100%;
+                text-align: left;
 
-                >.item{
-                    flex: 0 0 50%;
+                >ul{
+                    padding: 0.5rem 1rem;
+                    margin: 0;
+                    list-style-type: none;
+                    flex: 1 0 25%;
+                    max-width: 100%;
+                    box-sizing: border-box;
 
-                    >img{
-                        width: 100%;
+                    >li{
+                        font-size: 0.5rem;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        line-height: 1rem;
+
+                        &.title{
+                            font-size: 0.75rem;
+                            margin-bottom: 0.25rem;
+                            font-family: $font-title;
+                            color: #ccc;
+                        }
                     }
                 }
             }

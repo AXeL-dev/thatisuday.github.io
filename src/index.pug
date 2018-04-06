@@ -61,10 +61,12 @@ html
             a(href="https://ezgo.run", target="_blank")
                 img(src="./dept/link.svg", alt="golang")
 
+        //- icons menu (bottom)
         .icons-menu.bottom
             a(href="mailto:thatisuday@gmail.com")
                 img(src="./dept/gmail.svg", alt="gmail")
 
+        //- fullpage.js
         #fullpage
             //- about me
             .section.about
@@ -78,8 +80,15 @@ html
 
             //- skills
             .section.skills
-                .item 
-                    img(src="./dept/skills.svg", alt="")
+                h2 I am good at
+
+                .uls
+                    for set in skills
+                        ul
+                            li.title= set[0]
+
+                            for item in set[1]
+                                li= item
 
             //- projects
             .section.projects
