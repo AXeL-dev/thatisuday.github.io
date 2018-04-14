@@ -22,7 +22,7 @@ gulp.task('html', function () {
                 repos: [
                     { name: 'ng-dropzone', desc: 'AngularJS directive for Dropzone, an easy to use drag\'n\'drop file upload library.', stars: '91', forks: '24', downloads: '18k' },
                     { name: 'ng-image-gallery', desc: 'Probably the best angular inline and modal image gallery combined.', stars: '65', forks: '51', downloads: '12k' },
-                    { name: 'ngx-image-gallery', desc: 'Probably the best Angular 4+ modal and inline image gallery.', stars: '16', forks: '5', downloads: '4k' },
+                    { name: 'ngx-image-gallery', desc: 'Probably the best Angular 4+ modal and inline image gallery.', stars: '19', forks: '5', downloads: '4k' },
                     { name: 'npm-time-ago', desc: 'Simple time ago function for node that actually works.', stars: '4', forks: '1', downloads: '13k' },
                     { name: 'npm-sharper', desc: 'Simple time ago function for node that actually works.', stars: '14', forks: '1', downloads: '1k' },
                     { name: 'ng-spin', desc: 'Simple  $http interceptor spinner for angular.js.', stars: '9', forks: '1', downloads: '1k' },
@@ -39,7 +39,7 @@ gulp.task('html', function () {
                         'Semantic UI / Clarity', 'Angular Material', 'Progressive Web Apps', 'Web Sockets',
                     ],
                     'back-end': [
-                        'Node.js', 'Typescript', 'GoLang', 'PHP', 'MySQL+SQLite / Sequelize', 'MongoDb / Mongoose',
+                        'Node.js', 'Typescript', 'GoLang', 'PHP', 'MySQL+SQLite / Sequelize', 'MongoDb / Mongoose', 'Redis',
                         'Rest API (Express)'
                     ],
                     'dev-ops': [
